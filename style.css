@@ -1,0 +1,726 @@
+
+/* Estilo Geral */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ropa Sans", serif;
+}
+ 
+
+
+body{
+    background-color: black;
+    min-height: 50vh;
+    display: block;
+}
+
+
+
+.interface {
+    min-height: 120px;
+    margin: 0 auto;
+}
+
+section {
+    width: 100%;
+    height: auto;
+    padding: 40px 4%;
+    min-height: 100vh;
+ }
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #40C4FF;
+    border: 0;
+    border-radius: 30px;
+    cursor:pointer;
+    transition: .2s;
+}
+
+button:hover, form .btn-enviar input:hover{
+    box-shadow: 0px 0px 10px #30bafafd;
+    transform: scale(1.05);
+}
+
+h2.titulo {
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: #40C4FF;
+}
+
+
+/* Estilo Cabeçalho*/
+
+header{
+  padding: 20px 4%;  
+}
+
+header .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: #8d8d8d;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: #fff;
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: none;
+
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+header .logo  a{
+    color: #40C4FF;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+/* Estilo Topo do Site*/
+
+section.topo-do-site{
+    padding: 40px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 90px;
+}
+
+/*.topo-do-site.interface.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 90px;
+
+}*/
+
+
+.topo-do-site h2{
+    color: #fff;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.topo-do-site h1{
+    color: #fff;
+    font-size: 50px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span {
+    color: #40C4FF;
+}
+
+.topo-do-site .txt-topo-site p {
+    color: #fff;
+    margin: 40px 0;
+    font-size: 25px;
+}
+
+.topo-do-site .img-topo-site img {
+    width: 80%;
+    margin: 0 40px;
+    height: auto;
+    background-color: #40C4FF;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+} 
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+} 
+
+
+
+@keyframes flutuar {
+    0%{
+        top: 0;
+    }
+
+    100%{
+        top: 30px;
+    }
+}
+
+
+
+/*Estilo menu mobile*/
+
+.btn-abrir-menu i{
+    color: #40C4FF;
+    font-size: 40px;
+    display: none;
+}
+
+.menu-mobile{
+    background-color: #000;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+    backdrop-filter: blur(10px);
+}
+
+.menu-mobile nav{
+    display: none;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile .btn-abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile .btn-fechar {
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i{
+    color: #40C4FF;
+    font-size: 30px;
+
+}
+
+.menu-mobile nav ul {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+.menu-mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: #40C4FF;
+    color: #000;
+
+}
+
+.overlay-menu{
+    background-color: #00000079;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+
+/*Estilo conhecimentos*/
+
+section.conhecimentos{
+    padding: 40px 4%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+   
+}
+
+
+
+/*section .projetos .interface {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+}*/
+
+.conhecimentos .flex{ 
+    gap: 60px;
+    display: flex;
+}
+
+.conhecimentos .conhecimentos-box{
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px ;
+    margin-top: 45px;
+    transition: .5s;
+    background-color: rgb(15, 15, 15);
+}
+
+.conhecimentos .conhecimentos-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffffff7b;
+}
+
+.conhecimentos .conhecimentos-box i{
+    font-size: 68px;
+    color: #40C4FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.conhecimentos .conhecimentos-box h3{
+    font-size: 26px;
+    margin: 15px 0;
+
+}
+
+/*Estilo habilidades*/
+
+section.habilidades{
+    padding: 40px 4%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    background-color: rgb(15, 15, 15);
+   
+}
+
+
+
+/*section .projetos .interface {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+}*/
+
+.habilidades .flex{ 
+    gap: 60px;
+    display: flex;
+}
+
+.habilidades .habilidades-box{
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px ;
+    margin-top: 45px;
+    transition: .5s;
+    background-color: #000000;
+}
+
+.habilidades .habilidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffffff7b;
+}
+
+.habilidades .habilidades-box i{
+    font-size: 48px;
+    color: #40C4FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.habilidades .habilidades-box h3{
+    font-size: 25px;
+    margin: 30px 0;
+    text-align: center;
+
+}
+
+
+/*estili Sobre mim*/
+
+section.sobre{
+    padding: 40px 4%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 40px;
+    background-color: rgb(15, 15, 15);
+    
+}
+.sobre.flex{
+    gap: 40px;
+}
+.sobre .txt-sobre{
+    color: #fff;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span{
+    color: #40C4FF;
+    display: block;
+
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 40px 0 0;
+    text-align: justify;
+    font-size: 20px;
+}
+.sobre .interface .flex .img-sobre img{
+    width: 500px;
+    margin-top: 40 4%;
+    border-radius: 5%;
+    box-shadow: 0 0 10px 5px #40c3ff43;
+    filter: grayscale(2)
+}
+
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    margin: 60px 10px 0 0;
+    border-radius: 50%;
+    border: none;
+    background-color: #40C4FF;
+    font-size: 25px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-social button:hover{
+    box-shadow: 0px 0px 10px #30bafafd;
+    transform: scale(1.05);
+}
+
+
+/*Estilo portifolio*/
+section.portifolio{
+    padding: 40px 0 0 0;
+    box-shadow: 0 0 40px 10px #a1a1a12f;
+    align-items: center;
+    display: flex;
+}
+
+.portifolio .flex{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.img-port{
+    width: 200px;
+    height:250px ;
+    background-color: #40C4FF;
+    background-size: cover;
+    background-position: 0% 100%;
+    transition: 5s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-port:hover{
+    background-position: 100% 100%;
+
+}
+
+.construcao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+    height:250px ;
+    background-color: #232323;
+    margin-top: 40px;
+    background-size: cover;
+    background-position: 0% 100%;
+    transition: 5s;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.construcao h2{
+    color: #fff;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0 20px;
+}
+
+.construcao h4{
+    color: #40C4FF;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.construcao h1{
+    color: #fff;
+    font-size: 15px;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #8e8e8e6f;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+/*ESTILO FORMULARIO*/
+ .formulario{
+    padding: 80px 4%; 
+    background-color: #151515;
+}
+.flex-footer{
+    display: flex;
+}
+form {
+   max-width: 500px; 
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   gap: 10px;
+   margin-top: 40px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: #484848;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+form input::placeholder{
+    color: #3680a2;
+}
+
+form textarea::placeholder{
+    color: #3680a2;
+}
+
+form textarea{
+    resize: none;
+    max-height: 200px;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+form .btn-enviar input{
+    width: 120px;
+    background-color: #40C4FF;
+    color: #232323;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+/*estilo rodape*/
+
+footer{
+    padding: 20px 4%;
+    box-shadow: 0 0 40px 10px #a1a1a12f;
+}
+
+.flex-footer .line-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.line-footer{
+    padding: 20px 0;
+    flex: 1;
+    flex-direction: row;
+    
+}
+
+.borda{
+    border-top: 3px solid #40C4FF;
+}
+
+footer .logo-footer  a{
+    color: #40C4FF;
+    font-size: 30px;
+    font-weight: 800;
+    text-decoration: none;
+
+}
+
+footer .line-footer p i{
+    color: #40C4FF;
+    font-size: 22px;
+}
+
+footer .line-footer p a{
+    color: #fff;
+    margin-left: 5px;
+}
+
+
+/*media*/
+
+@media screen and (max-width: 1100px){
+
+/*classes gerais*/
+    .flex{
+        flex-direction: column;
+    }
+
+    .topo-do-site .flex{
+        flex-direction: column-reverse;
+    }
+/*cabeçalho*/
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+/*topo do site*/
+    section.topo-do-site{
+        padding: 20px 8%;
+        gap: 40px;
+    }
+    .topo-do-site h1{
+        font-size: 35px;
+        line-height: 30px;
+    }
+
+    .topo-do-site .txt-topo-site p {
+        margin: 20px 0;
+        font-size: 20px;
+    }
+    
+    .topo-do-site .img-topo-site img {
+        width: 80%;
+    } 
+
+/*Estilo conhecimentos*/
+
+    section.conhecimentos{
+        padding: 50px 8%;
+    }
+    h2.titulo{
+        font-size: 34px;
+        line-height: 30px;
+    }
+
+    /*estili Sobre mim*/
+
+    section.sobre{
+        padding: 80px 8%;
+    }
+    .sobre .txt-sobre h2{
+        font-size: 34px;
+        line-height: 35px;
+        text-align: center;
+    }
+    .btn-social{
+        text-align: center;
+    }
+    .sobre .interface .flex .img-sobre img{
+        width: 400px;
+    }
+    .sobre .interface .flex{
+        flex-direction: column-reverse;
+    }
+
+    /*Estilo habilidades*/
+
+section.habilidades{
+    padding: 80px 8%;
+   
+}
+    /*Estilo portifolio*/
+    section.portifolio{
+        padding: 40px 0 0 0;
+    }
+
+    .portifolio .flex{
+       padding-top: 40px;
+    }
+    .img-port{
+        width: 200px;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .flex-footer .line-footer{
+        flex-direction: column;
+    }
+
+
+    .menu-mobile nav{
+        display: block;
+    }
+
+    .overlay-menu{
+        background-color: #00000079;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 88888;
+        display: none;
+    }
+
+    .btn-abrir-menu i{
+        display: block;
+    }
+    
+    
+}
